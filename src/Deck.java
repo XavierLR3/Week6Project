@@ -6,7 +6,9 @@ public class Deck {
 
 	private List<Card> cards = new ArrayList<>();
 
-    public Deck() {
+    //Initializes the deck with 52 Card objects, covering all combinations of suits and ranks.
+	
+	public Deck() {
         String[] suits = {"Hearts", "Diamonds", "Clubs", "Spades"};
         String[] ranks = {"Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King", "Ace"};
         for (String suit : suits) {
@@ -16,10 +18,14 @@ public class Deck {
         }
     }
 
+	//Randomizes the order of the cards in the deck
+	
     public void shuffle() {
         Collections.shuffle(cards);
     }
 
+    //Removes and returns the top card from the deck
+    
     public Card draw() {
         return cards.remove(0);
     }
